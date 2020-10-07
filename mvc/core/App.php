@@ -8,7 +8,12 @@ class App {
 
     function __construct(){
         $arr = $this->URLProcess();
-        print_r($arr); 
+        //Array ( [0] => Home [1] => Sayhi [2] => 1 [3] => 2 [4] => 3 )
+        //xu ly controller
+        if(file_exists("./mvc/controllers/".$arr[0].".php")){
+            $this->controller = $arr[0];
+        }
+        require_once "./mvc/controllers/".$this->controller.".php";
     }
 
     function URLProcess(){
