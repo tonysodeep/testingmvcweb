@@ -2,7 +2,7 @@
 class App {
     //http://localhost:8080/mvcwebphp/Home/SayHi/1/2/3
     protected $controller = "Home";
-    protected $action = "SayHi"; 
+    protected $action = "SayHi";
     protected $params = [];
 
 
@@ -19,7 +19,7 @@ class App {
         if(isset($arr[1])){
             if(method_exists($this->controller,$arr[1])){
                 $this->action = $arr[1];
-               
+
             }
             unset($arr[1]);
         }
@@ -30,7 +30,7 @@ class App {
         // echo $this->controller. "<br/>";
         // echo $this->action. "<br/>";
         // print_r($this->params). "<br/>";
-        call_user_func_array([$this->controller,$this->action],$this->params);  
+        call_user_func_array([$this->controller,$this->action],$this->params);
 
     }
 

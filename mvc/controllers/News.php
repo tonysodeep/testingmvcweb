@@ -4,7 +4,8 @@ class News{
         echo "News say hi";
     }
     function Abc($ho, $ten){
-        echo "chao ban ".$ho." ".$ten; 
+        echo "chao ban ".$ho." ".$ten;
     }
+
 }
 ?>
